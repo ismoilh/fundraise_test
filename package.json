@@ -1,0 +1,31 @@
+{
+  "name": "fundrise-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start:app": "ts-node src/app.ts",
+    "start:sync": "ts-node src/sync.ts",
+    "start:full-sync": "ts-node src/sync.ts --full-reindex",
+    "start": "concurrently \"npm run start:app\" \"npm run start:sync\"",
+    "start:full": "concurrently \"npm run start:app\" \"npm run start:full-sync\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@faker-js/faker": "^8.0.2",
+    "@types/faker": "^6.6.9",
+    "@types/mongodb": "^4.0.7",
+    "dotenv": "^16.3.1",
+    "mongodb": "^5.7.0",
+    "typescript": "^5.1.6",
+    "winston": "^3.9.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.4.0",
+    "concurrently": "^7.6.0",
+    "ts-node": "^10.9.1"
+  }
+}
